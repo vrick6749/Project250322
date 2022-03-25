@@ -1,0 +1,31 @@
+
+header{
+    width: 100%;
+    text-align: center;
+
+}
+
+h1{
+   
+}
+
+
+@media only screen 
+and (min-device-width:360px)
+and (max-device-width: 736px){
+    
+header{
+    width: 100%;
+    text-align: right;
+
+}
+
+h1{
+  color:red
+}
+}
+
+
+
+
+

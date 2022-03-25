@@ -1,25 +1,32 @@
-
+*{
+  padding: 0;
+  margin:0;
+}
 /*This is big screen media*/
 @media only screen and (min-width: 1200px) {
-  header{
-    width: 100%;
-    text-align: center;
+  body{
+    
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 2fr 3fr 1fr;
+  }
 
 }
-
-h1{
-   
-}
-
 
 /*This is tablet screen media*/
 @media only screen and (min-width: 768px) {
+  body{
+    
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 2fr 3fr 1fr;
+  }
 
 
 
 }
 
-}
+
 
 
 
@@ -28,19 +35,20 @@ h1{
 @media only screen 
 and (min-device-width:360px)
 and (max-device-width: 736px){
+  body{
     
+    display: grid;
+    grid-template-rows: 2fr 3fr 1fr;
+  }
+
+}
+
+/*text styles and background styles global rule as they wont be changed*/
 header{
-    width: 100%;
-    text-align: right;
-
+ background-color: #f75c03;
 }
-
 h1{
-  color:red
+  color: #00CC66;
+  font-family: 'Roboto Slab', serif;
 }
-}
-
-
-
-
 

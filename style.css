@@ -69,8 +69,8 @@ and (max-device-width: 736px){
   body{
     
     display: grid;
-    grid-template-columns: 7fr 1fr;
-    grid-template-rows: 2fr 3fr 1fr;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: .2fr 3fr .5fr;
   }
 
   header{
@@ -79,11 +79,34 @@ and (max-device-width: 736px){
   .navigationcontainer{
     grid-column: 1;
     grid-row: 2;
+    background-color: aquamarine;
   }
 
   /*enable disable to reveal menu*/
-  .navigationcontainer{
+  /* .navigationcontainer{
     display: none;
+  } */
+
+
+  .pets{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .aboutLucy{
+    height: 250px;
+    background-color: #00CC66;
+  }
+  .aboutBoston{
+    height: 250px;
+    background-color: blue;
+  }
+  .aboutZac{
+    height: 250px;
+    background-color: #00CC66;
+  }
+  .aboutFishy{
+    height: 250px;
+    background-color: blue;
   }
 }
 

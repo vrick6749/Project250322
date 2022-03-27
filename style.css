@@ -2,35 +2,64 @@
   padding: 0;
   margin:0;
 }
+/*****************************************************************************************************************************/
 /*This is big screen media*/
 @media only screen and (min-width: 1200px) {
   body{
     
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 2fr 3fr 1fr;
+    grid-template-rows: 2fr 1fr 3fr 1fr;
   }
 
+  header{
+    grid-column: 1 / span 3;
+  }
+
+  .navigation li{
+    display: inline-block;
+  }
 }
 
+
+
+
+
+
+
+/*****************************************************************************************************************************/
 /*This is tablet screen media*/
 @media only screen and (min-width: 768px) {
   body{
     
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 2fr 3fr 1fr;
+    grid-template-rows: 2fr 1fr 3fr 1fr;
+  }
+  
+
+  header{
+    grid-column: 1 / span 3;
   }
 
+  .navigationcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2;
+    }
 
 
+  .navigation li{
+    display: inline-block;
+  }
 }
 
 
 
 
 
-
+/*****************************************************************************************************************************/
 /*This is mobile phone media*/
 @media only screen 
 and (min-device-width:360px)
@@ -41,10 +70,16 @@ and (max-device-width: 736px){
     grid-template-rows: 2fr 3fr 1fr;
   }
 
+ 
+  
 }
+
+
 
 /*text styles and background styles global rule as they wont be changed*/
 header{
+  display: block;
+  text-align: center;
  background-color: #f75c03;
 }
 h1{
@@ -52,3 +87,6 @@ h1{
   font-family: 'Roboto Slab', serif;
 }
 
+.navigation li a{
+  text-decoration: none;
+}

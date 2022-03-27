@@ -69,10 +69,22 @@ and (max-device-width: 736px){
   body{
     
     display: grid;
+    grid-template-columns: 7fr 1fr;
     grid-template-rows: 2fr 3fr 1fr;
   }
 
-  
+  header{
+    grid-column: 1/ span 2;
+  }
+  .navigationcontainer{
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  /*enable disable to reveal menu*/
+  .navigationcontainer{
+    display: none;
+  }
 }
 
 

@@ -2,26 +2,73 @@ body{
   width: 98%;
   margin:auto
 }
-
-.container {
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "Header Header Header Header Header Header Header Header Header Header Header"
-    "Header Header Header Header Header Header Header Header Header Header Header"
-    "LAside LAside Body Body Body Body Body Body Body RAside RAside"
-    "LAside LAside Body Body Body Body Body Body Body RAside RAside"
-    "LAside LAside Body Body Body Body Body Body Body RAside RAside"
-    "LAside LAside Body Body Body Body Body Body Body RAside RAside"
-    "LAside LAside Body Body Body Body Body Body Body RAside RAside"
-    "LAside LAside Body Body Body Body Body Body Body RAside RAside"
-    "LAside LAside Body Body Body Body Body Body Body RAside RAside"
-    "Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer"; 
+@media only screen and (min-width: 768px) {
+  .container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.5fr 1.5fr 1.5fr 1.5fr 0.5fr; 
+    gap: 10px 10px; 
+  }
+  .Header { grid-area: 1 / 1 / 2 / 6; }
+  .Body {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: .3fr 1fr 1fr; 
+    gap: 10px 10px; 
+    grid-template-areas: 
+      "items1 items1 items1"
+      "items2 items2 items2"
+      "items2 items2 items2"; 
+    grid-area: 2 / 1 / 5 / 5; 
+  }
+  .items1 { grid-area: items1; }
+  .items2 { grid-area: items2;
+  height: 700px; }
+  .RAside { grid-area: 2 / 5 / 5 / 6; }
+  .footer { grid-area: 5 / 1 / 6 / 6; }
+  .LAside { grid-area: 3 / 5 / 5 / 6; }
 }
-.Header { grid-area: Header; }
-.Body { grid-area: Body; }
-.LAside { grid-area: LAside; }
-.RAside { grid-area: RAside; }
-.Footer { grid-area: Footer; }
+
+@media only screen and (min-width: 992px) {
+
+  .container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.2fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr; 
+    gap: 10px 10px; 
+    grid-template-areas: 
+      "Header Header Header Header Header Header Header Header Header Header Header"
+      "Header Header Header Header Header Header Header Header Header Header Header"
+      "LAside LAside Body Body Body Body Body Body Body RAside RAside"
+      "LAside LAside Body Body Body Body Body Body Body RAside RAside"
+      "LAside LAside Body Body Body Body Body Body Body RAside RAside"
+      "LAside LAside Body Body Body Body Body Body Body RAside RAside"
+      "LAside LAside Body Body Body Body Body Body Body RAside RAside"
+      "LAside LAside Body Body Body Body Body Body Body RAside RAside"
+      "LAside LAside Body Body Body Body Body Body Body RAside RAside"
+      "footer footer footer footer footer footer footer footer footer footer footer"; 
+  }
+  
+  
+  .Header { grid-area: Header; }
+  .Body {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: .2fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "items1 items1 items1"
+      "items2 items2 items2"
+      "items2 items2 items2"; 
+    grid-area: Body; 
+  }
+  .items1 { grid-area: items1; }
+  .items2 { grid-area: items2; 
+  height:700px;}
+  .LAside { grid-area: LAside; }
+  .RAside { grid-area: RAside; }
+  .footer { grid-area: footer; }
+  
+}
+
+

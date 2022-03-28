@@ -1,128 +1,27 @@
-*{
-  padding: 0;
-  margin:0;
-}
-/*****************************************************************************************************************************/
-/*This is big screen media*/
-@media only screen and (min-width: 1200px) {
-  body{
-    
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: .5fr 1fr 5fr 1fr;
-  }
-
-  header{
-    grid-column: 1 / span 3;
-  }
-
-  .navigation li{
-    display: inline-block;
-  }
+body{
+  width: 98%;
+  margin:auto
 }
 
-
-
-
-
-
-
-/*****************************************************************************************************************************/
-/*This is tablet screen media*/
-@media only screen and (min-width: 768px) {
-  body{
-    
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: .5fr 1fr 5fr 1fr;
-  }
-  
-
-  header{
-    grid-column: 1 / span 3;
-  }
-
-  .navigationcontainer{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-column: 2;
-    }
-
-
-  .navigation li{
-    display: inline-block;
-    padding: 20px;
-  }
+.container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "Header Header Header Header Header Header Header Header Header Header Header"
+    "Header Header Header Header Header Header Header Header Header Header Header"
+    "LAside LAside Body Body Body Body Body Body Body RAside RAside"
+    "LAside LAside Body Body Body Body Body Body Body RAside RAside"
+    "LAside LAside Body Body Body Body Body Body Body RAside RAside"
+    "LAside LAside Body Body Body Body Body Body Body RAside RAside"
+    "LAside LAside Body Body Body Body Body Body Body RAside RAside"
+    "LAside LAside Body Body Body Body Body Body Body RAside RAside"
+    "LAside LAside Body Body Body Body Body Body Body RAside RAside"
+    "Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer"; 
 }
-
-
-
-
-
-/*****************************************************************************************************************************/
-/*This is mobile phone media*/
-@media only screen 
-and (min-device-width:360px)
-and (max-device-width: 736px){
-  body{
-    
-    display: grid;
-    grid-template-columns: 5fr 2fr;
-    grid-template-rows: .2fr 3fr .5fr;
-  }
-
-  header{
-    grid-column: 1/ span 2;
-  }
-  .navigationcontainer{
-    grid-column: 1;
-    grid-row: 2;
-    background-color: aquamarine;
-  }
-
-  /*enable disable to reveal menu*/
-  /* .navigationcontainer{
-    display: none;
-  } */
-
-
-  .pets{
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .aboutLucy{
-    height: 250px;
-    background-color: #00CC66;
-  }
-  .aboutBoston{
-    height: 250px;
-    background-color: blue;
-  }
-  .aboutZac{
-    height: 250px;
-    background-color: #00CC66;
-  }
-  .aboutFishy{
-    height: 250px;
-    background-color: blue;
-  }
-}
-
-
-
-/*text styles and background styles global rule as they wont be changed*/
-header{
-  display: block;
-  text-align: center;
- background-color: #f75c03;
-}
-h1{
-  color: #00CC66;
-  font-family: 'Roboto Slab', serif;
-}
-
-.navigation li a{
-  text-decoration: none;
-}
+.Header { grid-area: Header; }
+.Body { grid-area: Body; }
+.LAside { grid-area: LAside; }
+.RAside { grid-area: RAside; }
+.Footer { grid-area: Footer; }
